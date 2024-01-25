@@ -4,6 +4,8 @@ https://www.youtube.com/watch?v=9t9Mp0BGnyI
 
 https://raw.githubusercontent.com/RodrigoMvs123/NGINX-Tutorial-for-Beginners/main/README.md
 
+https://github.com/RodrigoMvs123/NGINX-Tutorial-for-Beginners/blame/main/README.md
+
 https://www.airbnb.com/ 
 Inspect 
 Network
