@@ -1,4 +1,4 @@
-# NGINX-Tutorial-for-Beginners
+## NGINX-Tutorial-for-Beginners
 
 https://www.youtube.com/watch?v=9t9Mp0BGnyI 
 
@@ -6,7 +6,11 @@ https://raw.githubusercontent.com/RodrigoMvs123/NGINX-Tutorial-for-Beginners/mai
 
 https://github.com/RodrigoMvs123/NGINX-Tutorial-for-Beginners/blame/main/README.md
 
-https://www.airbnb.com/ 
+
+## Airbnb UI
+
+- https://www.airbnb.com/ 
+```
 Inspect 
 Network
 Headers
@@ -22,20 +26,29 @@ Computer -> Request -> ( AWS Server ) -> Response
 
 Reverse Proxy / Load Balancer 
 Computer -> Request -> ( Nginx ) -> Request ( Airbnb ) -> Response to Nginx -> Response to Browser
+```
 
-NGINX Installation 
+## NGINX Installation 
 On Windows
+
 https://nginx.org/en/docs/windows.html 
 
 Download
+```bash
 cd c:\
 unzip nginx-1.25.3.zip
 cd nginx-1.25.3
 start nginx
 localhost
+```
 
+#### Prompt
+```bash
 code .
+```
 
+## Source Code
+```javascript
 Visual Studio Code
 Explorer
 Open Editors
@@ -159,17 +172,20 @@ http {
     #}
 
 }
+```
 
-Nginx Terminology 
-
+#### Nginx Terminology 
+```
 Key-value pairs 
 Directive 
 Block of code
 Context 
 
-
 Nginx Serving Static Content 
+``` 
 
+## Source Code
+```javascript
 Visual Studio Code
 Explorer
 Open Editors
@@ -200,11 +216,16 @@ Commercial support is available at
 <p><em>Thank you for using nginx.</em></p>
 </body>
 </html>
+```
 
-Visual Studio Code
-Terminal 
+### Visual Studio Code
+Terminal
+```bash
 nginx -s reload
+``` 
 
+## Source Code
+```javascript
 Visual Studio Code
 Explorer
 Open Editors
@@ -220,7 +241,9 @@ http {
 }
 
 events {}
+```
 
+```html
 Visual Studio Code
 Explorer
 Open Editors
@@ -232,9 +255,11 @@ index.html
             <h1>Hello my friends. I am served from NGINX</h1>
         </body>
     </html>
+```
 
 Nginx Mime Types
 
+```css
 Visual Studio Code
 Explorer
 Open Editors
@@ -247,7 +272,9 @@ h1 {
     background-color: pink;
     color: aqua;
 }
+```
 
+```html
 Visual Studio Code
 Explorer
 Open Editors
@@ -267,8 +294,9 @@ index.html
             <h1>Hello my friends. I am served from NGINX</h1>
         </body>
     </html>
+```
 
-
+```javascript
 Visual Studio Code
 Explorer
 Open Editors
@@ -291,12 +319,17 @@ http {
 }
 
 events {}
+```
 
 localhost:8080
+```
 Inspect
 Network
 Content-Type: text/css
+```
 
+## Source Code
+```javascript
 Visual Studio Code
 Explorer
 Open Editors
@@ -405,7 +438,9 @@ types {
     video/x-ms-wmv                                   wmv;
     video/x-msvideo                                  avi;
 }
+```
 
+```javascript
 Visual Studio Code
 Explorer
 Open Editors
@@ -426,18 +461,12 @@ http {
 }
 
 events {}
+```
 
 Nginx Location Block 
 
-Visual Studio Code
-Explorer 
-Open Editors
-nginx.conf
-styles.css
-fruits
-index.html
-mime.types
 
+```html
 Visual Studio Code
 Explorer 
 Open Editors
@@ -463,7 +492,9 @@ index.html
             </ul>>
         </body>
     </html>
+```
 
+```javascript
 Visual Studio Code
 Explorer 
 Open Editors
@@ -494,8 +525,9 @@ http {
 }
 
 events {}
+```
 
-
+```html
 Visual Studio Code
 Explorer 
 Open Editors
@@ -522,7 +554,9 @@ veggies.html
             </ul>>
         </body>
     </html>
+```
 
+```javascript
 Visual Studio Code
 Explorer 
 Open Editors
@@ -565,13 +599,18 @@ http {
 }
 
 events {}
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 nginx -s reload 
+```
 
 Nginx Redirects and Rewrites
 
+## Source Code
+```javascript
 Visual Studio Code
 Explorer 
 Open Editors
@@ -653,13 +692,21 @@ events {}http {
 }
 
 events {}
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 nginx -s reload 
+```
 
-localhost:8080/crops/ ( Redirect to http://localhost:8080/fruits/ )
+localhost:8080/crops/ 
 
+( Redirect to http://localhost:8080/fruits/ )
+
+
+## Source Code
+```javascript
 Visual Studio Code
 Explorer 
 Open Editors
@@ -709,50 +756,45 @@ http {
 }
 
 events {}
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 nginx -s reload 
+```
 
-localhost:8080/number/3 ( Redirect to  
+localhost:8080/number/3 
+
+Redirect to  
+```
 location ~* /count/[0-9] {
             root C:/Users/Matheus/Desktop/Rodrigo/nginx;
             try_files /index.html =404;
         }
-)
+```
 
-Nginx Load Balancer 
-
+## Nginx Load Balancer 
+```
 Reverse Proxy / Load Balancer 
 Computer -> Request -> ( Nginx ) -> Request ( Airbnb ) -> Response to Nginx -> Response to Browser
 
 Computer -> Request -> ( Nginx ) -> Request ( AWS ) -> Response to Nginx -> Response to Browser
 
 …
+```
 
-Visual Studio Code
-Explorer 
-Open Editors
-nginx.conf
-styles.css
-fruits
-server
-index.js
-vegetables
-veggies.html
-index.html
-mime.types
-
-index.js
-
-
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 cd server
 npm init
 npm init -y
 npm install express
+```
 
+## Source Code
+```json
 Visual Studio Code
 Explorer 
 Open Editors
@@ -774,15 +816,20 @@ package.json
     "start": "node index"
 },
 //…
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 npm run start
+```
 
-Docker Compose 
+## Docker Compose 
 Make a Docker Container 
+
 https://docs.docker.com/language/nodejs/containerize/ 
 
+```dockerfile
 // Dockerfile:
 
 FROM node:10
@@ -803,7 +850,9 @@ COPY . .
 
 EXPOSE 8080
 CMD [ "node", "server.js" ]
+```
 
+```dockerfile
 Visual Studio Code
 Explorer 
 Open Editors 
@@ -840,22 +889,29 @@ COPY . .
 
 EXPOSE 7777
 CMD [ "npm", "run", "start" ]
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 cd server
 docker build . -t myserver // Image ( myserver ) 
 docker run -p 1111:7777 -d myserver
+```
 
 localhost:1111
+
 I am a endpoint
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 docker run -p 2222:7777 -d myserver
 docker run -p 3333:7777 -d myserver
 docker run -p 4444:7777 -d myserver
-
+```
+## Source Code
+```javascript
 Visual Studio Code
 Explorer 
 Open Editors
@@ -919,40 +975,14 @@ http {
 }
 
 events {}
+```
 
-Visual Studio Code
+### Visual Studio Code
 Terminal
+```bash
 nginx -s reload
+```
 
 localhost:8080
+
 I am a endpoint
-
-localhost:8080
-I am a endpoint
-
-localhost:8080
-I am a endpoint
-
-localhost:8080
-I am a endpoint
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
